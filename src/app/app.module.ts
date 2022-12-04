@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SearchPipe } from '../pipes/search.pipe';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchPipe } from '../pipes/search.pipe';
     ToolbarComponent,
     NavbarComponent,
     MainComponent,
-    SearchPipe
+    SearchPipe,
+    FormComponent
   ],
     imports: [
         BrowserModule,

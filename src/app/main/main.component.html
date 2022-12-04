@@ -1,25 +1,31 @@
 <div>
-  <div>
-    <input class="search" placeholder="Buscar alumno" [formControl]="search">
-  </div>
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Nota</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let alumno of alumnos | search:filter">
-      <td>{{ alumno.nombre }}</td>
-      <td>{{ alumno.materia }}</td>
-      <td>
-        <div [ngClass]="{'green': alumno.nota >= 7, 'red' : alumno.nota <= 6}">
-          <p> {{ alumno.nota }}</p>
-        </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+  <section class="p-2 mb-2">
+    <div>
+      <h1>Tabla de notas</h1>
+    </div>
+    <div>
+      <input class="search form-control" placeholder="Buscar alumno" [formControl]="search">
+    </div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Materia</th>
+        <th scope="col">Nota</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let alumno of alumnos | search:filter">
+        <td>{{ alumno.nombre }}</td>
+        <td>{{ alumno.materia }}</td>
+        <td>
+          <div [ngClass]="{'green': alumno.nota >= 7, 'red' : alumno.nota <= 6}">
+            <p> {{ alumno.nota }}</p>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <app-form></app-form>
 </div>
