@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { debounceTime } from "rxjs";
 import { FormControl } from "@angular/forms";
+import { Alumno } from "../model/alumno";
+
+// @ts-ignore
+import alumnosData from '../alumnos.json';
 
 @Component({
   selector: 'app-main',
@@ -11,39 +15,7 @@ export class MainComponent {
 
   search = new FormControl('');
   filter: string = '';
-
-  alumnos = [
-    {
-      nombre: 'Florencia',
-      materia: 'Historia',
-      nota: 5,
-      aprobado: false,
-    },
-    {
-      nombre: 'Facundo',
-      materia: 'Matematica',
-      nota: 10,
-      aprobado: true,
-    },
-    {
-      nombre: 'Alexander',
-      materia: 'Literatura',
-      nota: 6,
-      aprobado: false,
-    },
-    {
-      nombre: 'Leonardo',
-      materia: 'Informática',
-      nota: 8,
-      aprobado: true,
-    },
-    {
-      nombre: 'Nahuel',
-      materia: 'Historia',
-      nota: 7,
-      aprobado: true,
-    }
-  ]
+  alumnos:Alumno[] = alumnosData;
 
   constructor() {}
 
@@ -55,6 +27,12 @@ export class MainComponent {
 
   filterSearch(value: string) {
     this.filter = value;
+  }
+
+  deleteAlumno(id:number, alumnos:Alumno[]) {
+    const alumnoSeleccionado:Alumno = alumnos.filter((value) => value.id == id)[0];
+    const indexOfAlumnoSeleccionado:number = alumnos.indexOf(alumnoSeleccionado);
+    alumnos.splice(indexOfAlumnoSeleccionado, 1);
   }
 
 

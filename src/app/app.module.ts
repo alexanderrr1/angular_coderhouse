@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SearchPipe } from '../pipes/search.pipe';
 import { FormComponent } from './form/form.component';
+import { ConcatNamesPipe } from '../pipes/concat-names.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormComponent } from './form/form.component';
     NavbarComponent,
     MainComponent,
     SearchPipe,
-    FormComponent
+    FormComponent,
+    ConcatNamesPipe
   ],
     imports: [
         BrowserModule,

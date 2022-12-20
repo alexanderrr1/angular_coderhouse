@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Florencia",
+    "apellido": "Urrejola",
+    "materia": "Historia",
+    "nota": 5,
+    "aprobado": false
+  },
+  {
+    "id": 2,
+    "nombre": "Facundo",
+    "apellido": "Godoy",
+    "materia": "Matematica",
+    "nota": 10,
+    "aprobado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Alexander",
+    "apellido": "Reineck",
+    "materia": "Literatura",
+    "nota": 6,
+    "aprobado": false
+  },
+  {
+    "id": 4,
+    "nombre": "Leonardo",
+    "apellido": "Askajil",
+    "materia": "Informática",
+    "nota": 8,
+    "aprobado": true
+  },
+  {
+    "id": 5,
+    "nombre": "Nahuel",
+    "apellido": "Urdampilleta",
+    "materia": "Historia",
+    "nota": 7,
+    "aprobado": true
+  }
+]

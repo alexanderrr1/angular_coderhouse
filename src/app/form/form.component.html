@@ -7,6 +7,11 @@
       <small class="text-danger" *ngIf="name?.invalid && (name?.touched && name?.dirty)">Error de ingreso de datos</small>
     </div>
     <div class="form-group pb-2">
+      <label for="lastName">Apellido del alumno</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      <small class="text-danger" *ngIf="name?.invalid && (name?.touched && name?.dirty)">Error de ingreso de datos</small>
+    </div>
+    <div class="form-group pb-2">
       <label for="subject">Materia</label>
       <select class="form-control" id="subject" formControlName="subject">
         <option value="">Seleccione Materia...</option>
