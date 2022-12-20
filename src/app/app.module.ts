@@ -9,6 +9,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { SearchPipe } from '../pipes/search.pipe';
 import { FormComponent } from './form/form.component';
 import { ConcatNamesPipe } from '../pipes/concat-names.pipe';
+import { TamanioFuenteDirective } from './tamanio-fuente.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ConcatNamesPipe } from '../pipes/concat-names.pipe';
     MainComponent,
     SearchPipe,
     FormComponent,
-    ConcatNamesPipe
+    ConcatNamesPipe,
+    TamanioFuenteDirective
   ],
     imports: [
         BrowserModule,
